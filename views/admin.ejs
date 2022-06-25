@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="registration.css">
+    <link rel="stylesheet" href="adminStyle.css">
+
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <a class="nav-brand" href="#"><h1 class="full-logo">TechBuy</h1> 
+           <h1 class="short-logo">TB</h1></a>
+         
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-md-auto gap-2">
+              <li class="nav-item rounded">
+                <a class="" active" aria-current="page" href="#"><i class="bi bi-house-fill me-2"></i>Home</a>
+              </li>
+              <li class="nav-item rounded">
+                <a class="" href="#"><i class="bi bi-people-fill me-2"></i>About</a>
+              </li>
+              <li class="nav-item rounded">
+                <a class="" href="#"><i class="bi bi-telephone-fill me-2"></i>Contact</a>
+              </li>
+              <li class="nav-item dropdown rounded">
+                <a class=" dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-fill me-2"></i>Profile</a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Account</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+
+    
+    <div class="container"><h1>Admin view</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <input
+                type="text"
+                id="searchInput"
+                onkeyup="query()"
+                placeholder="Search Product..."              
+                /> 
+            </div>
+            
+                <div class="col-md-2">
+                    <button onclick="printData()" class="print_page">Print this page</button>
+                </div>
+            </div>
+           
+        </div>
+        <div class="container">
+        <table id="prod-table">
+            <tr style="background-color: #417D7A ;">
+                <th>Sl. No.</th>
+                <th>Prod_name</th>
+                <th>Prod_desc</th>
+                <th>Prod_cost</th>
+                
+
+            </tr>
+
+            <% if(products.length> 0) { %>
+                <% for(var i=0; i<products.length; i++){ %>
+                    <tr>
+                        <td>
+                            <%- products[i].id %>
+                        </td>
+                        <td>
+                            <%- products[i].Prod_name %>
+                        </td>
+                        <td>
+                            <%- products[i].Prod_desc %>
+                        </td>
+                        <td>
+                            <%- products[i].Prod_cost %>
+                        </td>
+                     
+                        
+                    </tr>
+                    <% } %>
+                        <% } else { %>
+                            <h1>Registion not found!</h1>
+                            <% } %>
+
+        </table>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <footer>
+
+        <div class="col-md-12">
+            <h1>Kle it</h1>
+            <p>copyright &copf;</p>
+        </div>
+
+    </footer>
+
+    
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+        
+</body>
+
+</html>

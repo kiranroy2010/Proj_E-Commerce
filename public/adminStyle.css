@@ -1,0 +1,79 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    white-space: nowrap;
+  }
+  .row{
+    margin-bottom: 25px;
+  }
+  
+  
+  td,
+  th {
+    border: 2px solid #171819;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  .container {
+    padding: 20px;
+    padding-bottom: 5px;
+    margin: 25px;
+    width: 90vw;
+    overflow: auto;
+  }
+  .print_page{
+    background-image: url("printer.svg");
+    background-position: 7px 10px; /* Position the search icon */
+    background-size: 30px 30px;
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 52px; /* Add some padding */
+    border: 2px solid #171819; /* Add a grey border */
+    border-radius: 20px;
+    margin-bottom: 12px; /* Add some space below the input */
+    margin-top: 7px;
+    cursor: pointer;
+    background-color: lightslategray;
+    color: white;
+  }
+  
+  .print_page:hover{
+    background-color: white;
+    color: #171819;
+  }
+  .excel_sheet{
+    background-image: url("excel.svg");
+    background-position: 7px 10px; /* Position the search icon */
+    background-size: 30px 30px;
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 52px; /* Add some padding */
+    border: 2px solid #171819; /* Add a grey border */
+    border-radius: 20px;
+    margin-bottom: 12px; /* Add some space below the input */
+    margin-top: 7px;
+    cursor: pointer;
+    background-color: #3CB371;
+    color: white;
+  }
+  .excel_sheet:hover{
+    background-color: #006400;
+    color: #ffffff
+    ;
+  }
+  
+  
+  #searchInput {
+    background-image: url("icons8.svg");
+    background-position: 7px 6px; /* Position the search icon */
+    background-size: 30px 30px;
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 52px; /* Add some padding */
+    border: 2px solid #171819; /* Add a grey border */
+    border-radius: 20px;
+    margin-bottom: 12px; /* Add some space below the input */
+  }
