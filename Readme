@@ -1,5 +1,6 @@
 # E-commerce
 A simple E-commerce website with HTML, CSS, JavaScript, Nodejs.
+Databse : XAAMP(sql)
 
 
 index route: http://localhost:3000/login
